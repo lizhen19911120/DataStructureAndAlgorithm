@@ -8,5 +8,11 @@
     <artifactId>Data Structure and Algorithm</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
+    <dependencies>
+        <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>5.0.7.RELEASE</version>
+        </dependency>
+    </dependencies>
 </project>

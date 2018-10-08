@@ -97,7 +97,7 @@ public class Dijkstra {
     /**
      * 存放各条有向边的权重，num1->num2:权重
      */
-    private static Map<String,Integer> costs = new HashMap<>();
+    private static Map<String,Integer> costsMap = new HashMap<>();
 
     /**
      * 打印起始顶点到顶点v的最短路径
@@ -127,8 +127,9 @@ public class Dijkstra {
         if(!verQueue.isEmpty())
             verQueue.clear();
         verQueue.addAll(Arrays.asList(verTices));
-
-        costs.putAll(costs);
+        if(!costsMap.isEmpty())
+            costsMap.clear();
+        costsMap.putAll(costs);
     }
 
     /**
@@ -146,7 +147,7 @@ public class Dijkstra {
             v.known=true;
             for (VerTex<T> w:v.adjacent) {
                 if (!w.known){
-                    int cvw = costs.get(v.num+"->"+w.num);
+                    int cvw = costsMap.get(v.num+"->"+w.num);
                     if (v.dist+cvw<w.dist){
                         w.dist=v.dist+cvw;
                         w.path=v;

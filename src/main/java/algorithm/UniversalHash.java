@@ -4,6 +4,7 @@ package algorithm;
 import java.util.Random;
 
 /**
+ *卡特-韦格曼绝招，给出一个通用散列函数，实现散列函数冲突概率至多是1/M
  * Created by lizhen on 2018/9/19.
  */
 public class UniversalHash {

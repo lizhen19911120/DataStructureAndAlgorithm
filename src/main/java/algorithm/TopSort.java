@@ -69,6 +69,15 @@ public class TopSort {
         public List<VerTex<T>> getAdjacent(){
             return adjacent;
         }
+
+        public int getNum() {
+            return num;
+        }
+
+        @Override
+        public String toString() {
+            return "VerTex"+this.num;
+        }
     }
 
     /**
@@ -135,10 +144,16 @@ public class TopSort {
 
     }
 
+
+
     /**
      * 图存在环异常
      */
     private static class CycleFoundException extends RuntimeException{}
+
+    public static List<VerTex> getVerList() {
+        return verList;
+    }
 
     public static void main(String[] args) {
         VerTex verTex1 = new VerTex(1),
