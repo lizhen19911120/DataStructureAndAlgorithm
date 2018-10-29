@@ -56,6 +56,9 @@ public class GcdTest {
     }
 
 
+    /**
+     * 对所有的@Test测试方法生效，方法执行前执行
+     */
     @Before
     public void before() {
         System.out.println("before gcd1()");
@@ -75,6 +78,9 @@ public class GcdTest {
         System.out.println(gcd);
     }
 
+    /**
+     * 对所有的@Test测试方法生效，方法执行后执行
+     */
     @After
     public void after() {
         System.out.println("after gcd1()");
